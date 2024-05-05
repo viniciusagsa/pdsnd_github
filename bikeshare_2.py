@@ -248,11 +248,12 @@ def main():
         user_stats(df)
         display_data(df)
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'no':
-            break
-        else:
-            print('Humm... Coundn\'t understand that. Please check if our answer is "yes" or "no"')
+        while True:
+            restart = input('\nWould you like to restart? Enter yes or no.\n')
+            if restart.lower() == 'no':
+                break
+            else:
+                print('Humm... Coundn\'t understand that. Please check if our answer is "yes" or "no"\n')
 
 
 if __name__ == "__main__":
